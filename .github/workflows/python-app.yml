@@ -22,6 +22,7 @@ jobs:
         if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
     - name: Start bot in backgroud
       run: |
+        pwd ; ls
         python3 main.py &
         sleep 100
       env: 
