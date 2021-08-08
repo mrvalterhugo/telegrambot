@@ -16,7 +16,7 @@ def get_price_per_hundred_protein(protein_per_hundred_package, price_per_hundred
     return price_per_hundred_protein
 
 bot_token = os.environ.get('BotToken')
-logging.info(bot_token)
+logging.error(bot_token)
 bot = telebot.TeleBot(bot_token)
 
 
