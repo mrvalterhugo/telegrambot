@@ -95,6 +95,7 @@ if __name__ == "__main__":
     bot.load_next_step_handlers()
     while True:
         try:
+            logging.error(bot_token)
             bot.polling()
         except Exception:
             time.sleep(15)
