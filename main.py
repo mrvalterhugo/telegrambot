@@ -86,7 +86,7 @@ if __name__ == "__main__":
                 bot.register_next_step_handler(msg, process_calc_step)
                 return
             price_per_hundred_protein = get_price_per_hundred_protein(price_per_hundred_package = price_per_hundred_package, protein_per_hundred_package = protein_per_hundred_grams)
-            msg = ('The price per 100 grams of {} protein is: {:0.2f}£'.format(name, price_per_hundred_protein))
+            msg = ('The price per 100 grams of {} protein is: £{:0.2f}'.format(name, price_per_hundred_protein))
             bot.reply_to(message, msg)
         except Exception as e:
             bot.reply_to(message, e)
