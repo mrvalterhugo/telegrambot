@@ -94,6 +94,7 @@ if __name__ == "__main__":
     bot.load_next_step_handlers()
     while True:
         try:
+            print("Connecting")
             bot.polling()
         except Exception:
             time.sleep(15)
