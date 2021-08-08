@@ -23,7 +23,7 @@ bot = telebot.TeleBot(bot_token)
 if __name__ == "__main__":
     @bot.message_handler(commands=['help'])
     def send_help(message):
-        bot.reply_to(message, 'To use this bot, send it a /start command')
+        bot.reply_to(message, 'Food Protein Calculator - To use this bot, send it a /start command')
 
     @bot.message_handler(commands=['start'])
     def start(message):
