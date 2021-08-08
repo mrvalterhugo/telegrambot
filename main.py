@@ -1,5 +1,6 @@
-import telebot
+import pip
 import time
+import os
 
 
 def get_price_per_g(quantity_per_package, price_per_package):
@@ -14,7 +15,7 @@ def get_price_per_hundred_protein(protein_per_hundred_package, price_per_hundred
     price_per_hundred_protein = ( price_per_hundred_package * 100 ) / protein_per_hundred_package
     return price_per_hundred_protein
 
-bot_token = '1945603802:AAE0e_V-Jf_5aUmxari30Ys225-_e1KvVOU'
+bot_token = os.environ.get('BotToken')
 bot = telebot.TeleBot(token=bot_token)
 
 
