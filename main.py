@@ -1,6 +1,7 @@
 import telebot
 import time
 import os
+import logging
 
 def get_price_per_g(quantity_per_package, price_per_package):
     quantity_per_package = float(quantity_per_package)
@@ -94,7 +95,7 @@ if __name__ == "__main__":
     bot.load_next_step_handlers()
     while True:
         try:
-            print("Connecting")
+            logging.info("Connecting")
             bot.polling()
         except Exception:
             time.sleep(15)
