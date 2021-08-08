@@ -5,5 +5,5 @@ services:
     build: .
     container_name: telegram-bot
     environment:
-      - BotToken=${{ secrets.BotToken }}
+      - BotToken
     restart: unless-stopped
