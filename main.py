@@ -1,4 +1,4 @@
-import pip
+import telebot
 import time
 import os
 
