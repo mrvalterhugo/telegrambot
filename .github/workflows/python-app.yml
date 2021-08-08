@@ -22,7 +22,9 @@ jobs:
         if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
     - name: Start bot in backgroud
       run: |
-        pwd ; ls
-        python3 main.py &
+        sudo systemctl restart telegrambot.service
+        sudo cat /etc/profile.d/telegrambot-token.sh
+        sudo echo "testing" > /etc/profile.d/telegrambot-token.sh
+        echo ${{ secrets.BotToken }}
       env: 
         BotToken: ${{ secrets.BotToken }}
