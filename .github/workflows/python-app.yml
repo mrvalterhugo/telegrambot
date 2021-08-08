@@ -11,6 +11,9 @@ on:
 
 jobs:
   build:
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
     runs-on: self-hosted
     - name: Install dependencies and Set enviroment Telegram bot token
       run: |
