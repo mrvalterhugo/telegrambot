@@ -24,6 +24,5 @@ jobs:
       run: |
         pwd ; ls
         python3 main.py &
-        sleep 100
       env: 
         BotToken: ${{ secrets.BotToken }}
