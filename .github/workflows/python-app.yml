@@ -23,6 +23,4 @@ jobs:
     - name: Start bot in backgroud
       run: |
         sudo systemctl restart telegrambot.service
-        echo ${{ secrets.BotToken }} > /etc/profile.d/telegrambot-token.sh
-      env: 
-        BotToken: ${{ secrets.BotToken }}
+        echo "BotToken=${{ secrets.BotToken }}" > /etc/profile.d/telegrambot-token.sh
