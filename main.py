@@ -1,7 +1,7 @@
 import telebot
 import time
 import os
-
+import logging
 
 def get_price_per_g(quantity_per_package, price_per_package):
     quantity_per_package = float(quantity_per_package)
@@ -16,7 +16,7 @@ def get_price_per_hundred_protein(protein_per_hundred_package, price_per_hundred
     return price_per_hundred_protein
 
 bot_token = os.environ.get('BotToken')
-print(bot_token)
+logging.info(bot_token)
 bot = telebot.TeleBot(bot_token)
 
 
