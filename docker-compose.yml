@@ -1,0 +1,9 @@
+---
+version: "3.3"
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-bot
+    environment:
+      - BotToken
+    restart: unless-stopped
