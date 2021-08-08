@@ -15,12 +15,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it.
     - uses: actions/checkout@v2
-
-    - name: Install dependencies and Set enviroment Telegram bot token
+    - name: Run docker-compose
+      env: 
+        BotToken: ${{ secrets.BotToken }}
       run: |
-        python3 -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
-    - name: Start bot in backgroud
-      run: |
-        echo "BotToken=${{ secrets.BotToken }}" > /etc/profile.d/telegrambot-token.sh
-        sudo systemctl restart telegrambot.service
+        docker-compose up -d --build
