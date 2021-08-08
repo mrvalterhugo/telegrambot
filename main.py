@@ -69,7 +69,7 @@ if __name__ == "__main__":
                 return
             global price_per_hundred_package
             price_per_hundred_package = get_price_per_g(quantity_per_package = quantity_per_package, price_per_package = price_per_package)
-            msg = ( "The price per 100 grams is: {:0.2f}£".format(price_per_hundred_package) )
+            msg = ( "The price per 100 grams is: £{:0.2f}".format(price_per_hundred_package) )
             bot.reply_to(message, msg)
             msg = bot.reply_to(message, "Now enter the amout of protein per 100g of the product:")
             bot.register_next_step_handler(msg, process_calc_step)
